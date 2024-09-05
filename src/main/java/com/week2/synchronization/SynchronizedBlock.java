@@ -2,9 +2,7 @@ package com.week2.synchronization;
 
 public class SynchronizedBlock {
     private int count = 0;
-    private final Object lock = new Object(); // Lock object for synchronized block
-
-    // Method with synchronized block
+    private final Object lock = new Object();
     public void incrementBlock() {
         synchronized (lock) {
             System.out.println(Thread.currentThread().getName() + " is incrementing using synchronized block. Current count: " + count);
